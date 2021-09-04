@@ -18,9 +18,9 @@ namespace BookStoreWebAPI.Controllers
             using (var context = new BookStoresDBContext())
             {
                 //get all authors
-                //return context.Authors.ToList();
-                
-                Author author = new Author();
+                return context.Authors.ToList();
+
+                //Author author = new Author();
                 //add a author
                 //author.FirstName = "John";
                 //author.LastName = "Smith";
@@ -31,13 +31,14 @@ namespace BookStoreWebAPI.Controllers
                 //author.Phone = "777-777-7777";
 
                 //remove author
-                author = context.Authors.Where(auth => auth.FirstName == "John").FirstOrDefault();
-                context.Authors.Remove(author);
+                //author = context.Authors.Where(auth => auth.FirstName == "John").FirstOrDefault();
+                //context.Authors.Remove(author);
 
-                context.SaveChanges();
+
+                //context.SaveChanges();
 
                 //get author by id
-                return context.Authors.Where(auth => auth.FirstName == "John").ToList();
+               // return context.Authors.Where(auth => auth.FirstName == "John").ToList();
             };
         }
     }
